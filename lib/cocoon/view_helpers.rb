@@ -126,7 +126,7 @@ module Cocoon
     end
 
     def create_object_on_association(f, association, instance, force_non_association_create)
-      if instance.class.name =~ /Mongoid::Associations/ || force_non_association_create
+      if instance.class.name =~ /Mongoid::Association/ || force_non_association_create
         create_object_with_conditions(instance)
       else
         assoc_obj = nil
